@@ -6,6 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 import StarsBackground from "./components/Background/StarsBackground";
 import ShootingStars from "./components/Background/ShootingStars";
 import HomePage from "./pages/HomePage";
@@ -32,6 +33,7 @@ function AppContent() {
         <Route path="/locations" element={<LocationsPage />} />
         <Route path="/compare" element={<ComparisonPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
