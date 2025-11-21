@@ -1,10 +1,11 @@
 .navbar {
-  background: #000000;
+  background: linear-gradient(135deg, #0a0e1a 0%, #0f1420 100%);
+  border-bottom: 1px solid #1f2437;
   padding: 0;
   position: sticky;
   top: 0;
-  z-index: 100;
-  border-bottom: 1px solid #1a1a1a;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-container {
@@ -14,31 +15,69 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  gap: 2rem;
 }
 
+/* Logo and Brand */
 .navbar-brand {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
   cursor: pointer;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.02);
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: 2px solid #ffd700;
-  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translate(-100%, -100%) rotate(45deg);
+  }
+  100% {
+    transform: translate(100%, 100%) rotate(45deg);
+  }
 }
 
 .star-icon {
-  color: #ffd700;
+  color: white;
   width: 24px;
   height: 24px;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .brand-title {
@@ -47,29 +86,55 @@
   color: white;
   margin: 0;
   letter-spacing: 0.3px;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
+/* Desktop Navigation */
 .navbar-right {
   display: flex;
   align-items: center;
   gap: 2.5rem;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .nav-link {
-  color: white;
+  color: #8b92b0;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  position: relative;
 }
 
 .nav-link:hover {
-  color: #ffd700;
+  color: #6366f1;
+  border-bottom-color: #6366f1;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 .theme-toggle {
-  background: #1a1a1a;
-  border: 1px solid #333333;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid #2a2f45;
   border-radius: 50%;
   width: 44px;
   height: 44px;
@@ -78,34 +143,168 @@
   justify-content: center;
   cursor: pointer;
   padding: 0;
+  transition: all 0.3s ease;
+  color: #06b6d4;
+  flex-shrink: 0;
 }
 
 .theme-toggle:hover {
-  background: #1a1a1a;
-  border-color: #333333;
+  background: rgba(99, 102, 241, 0.2);
+  border-color: #6366f1;
+  transform: rotate(20deg);
 }
 
-/* .moon-icon {
-  font-size: 20px;
-  display: flex;
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #06b6d4;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
   align-items: center;
   justify-content: center;
-} */
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
 
-/* .theme-toggle:hover .moon-icon {
-  color: #ffd700;
-} */
+.mobile-menu-btn:hover {
+  color: #6366f1;
+  transform: scale(1.1);
+}
 
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #0a0e1a 0%, #0f1420 100%);
+  border-bottom: 1px solid #1f2437;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.mobile-menu.open {
+  display: block;
+  max-height: 500px;
+}
+
+.mobile-nav-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+}
+
+.mobile-nav-link {
+  color: #8b92b0;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.mobile-nav-link:hover {
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+  padding-left: 1.5rem;
+}
+
+.mobile-theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid #2a2f45;
+  border-radius: 8px;
+  color: #06b6d4;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.mobile-theme-toggle:hover {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: #6366f1;
+  color: #6366f1;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .navbar-container {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
   }
 
   .navbar-right {
-    gap: 1rem;
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .brand-title {
+    font-size: 1.1rem;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .star-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
   }
 
   .brand-title {
     font-size: 1rem;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .star-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .mobile-nav-container {
+    padding: 0.75rem 1rem;
+    gap: 0.25rem;
+  }
+
+  .mobile-nav-link {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .mobile-theme-toggle {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.9rem;
   }
 }
