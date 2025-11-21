@@ -1,15 +1,21 @@
-import './App.css'
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
-import Navbar from './components/Navbar/Navbar'
-import StarsBackground from './components/Background/StarsBackground'
-import ShootingStars from './components/Background/ShootingStars'
-import HomePage from './pages/HomePage'
-import DashboardPage from './pages/DashboardPage'
-import LocationsPage from './pages/LocationsPage'
+import "./App.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import StarsBackground from "./components/Background/StarsBackground";
+import ShootingStars from "./components/Background/ShootingStars";
+import HomePage from "./pages/HomePage";
+import DashboardPage from "./pages/DashboardPage";
+import LocationsPage from "./pages/LocationsPage";
+import ComparisonPage from "./pages/ComparisonPage";
 
 function AppContent() {
-  const location = useLocation()
-  const showBackground = location.pathname === '/'
+  const location = useLocation();
+  const showBackground = location.pathname === "/";
 
   return (
     <div className="app">
@@ -24,9 +30,10 @@ function AppContent() {
         <Route path="/" element={<HomePage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/locations" element={<LocationsPage />} />
+        <Route path="/compare" element={<ComparisonPage />} />
       </Routes>
     </div>
-  )
+  );
 }
 
 function App() {
@@ -34,7 +41,7 @@ function App() {
     <Router>
       <AppContent />
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
