@@ -258,7 +258,7 @@ export const cities = [
   {
     id: "jashpur",
     name: "Jashpur",
-    coords: [23.01, 84.33],
+    coords: [22.8874, 84.1382], // ✔ Updated correct coordinates
     starVisibility: 78,
     cloudCover: 12,
     lightPollution: 3.6,
@@ -273,34 +273,10 @@ export const cities = [
         12, 12, 13, 12, 11, 12, 13, 12, 11, 10, 11, 12, 13, 12, 11, 10, 11, 12,
         11, 12, 13, 12, 11, 12,
       ],
-      lightPollution: [
-        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-      ],
+      lightPollution: Array(24).fill(4),
     },
   },
-  {
-    id: "surguja",
-    name: "Surguja",
-    coords: [23.93, 83.73],
-    starVisibility: 75,
-    cloudCover: 13,
-    lightPollution: 3.8,
-    temperature: 17,
-    humidity: 50,
-    history: {
-      starVisibility: [
-        75, 74, 75, 74, 75, 76, 75, 74, 73, 72, 71, 72, 73, 74, 75, 76, 75, 74,
-        73, 72, 71, 70, 69, 75,
-      ],
-      cloudCover: [
-        13, 14, 13, 12, 13, 14, 13, 12, 11, 12, 13, 14, 13, 12, 11, 12, 13, 14,
-        13, 14, 13, 12, 13, 13,
-      ],
-      lightPollution: [
-        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
-      ],
-    },
-  },
+
   {
     id: "surajpur",
     name: "Surajpur",

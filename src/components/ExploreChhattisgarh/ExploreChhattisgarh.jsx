@@ -42,11 +42,17 @@ const ExploreChhattisgarh = () => {
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
             {cities.map((city, idx) => {
+              const color = GET_COLOR_BY_VISIBILITY(city.starVisibility);
+              const svgIcon = `<svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C7.58 0 4 3.58 4 8c0 7 8 24 8 24s8-17 8-24c0-4.42-3.58-8-8-8z" fill="${color}" stroke="white" stroke-width="0.5"/>
+              </svg>`;
+
+              const encodedSvg = btoa(svgIcon);
               const coloredMarker = new L.Icon({
-                iconUrl: `data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCAzMiA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNiIgZmlsbD0iJHtjaXR5LnN0YXJWaXNpYmlsaXR5ID49IDg1ID8gJyMxMGI5ODEnIDogY2l0eS5zdGFyVmlzaWJpbGl0eSA+PSA3NSA/ICcjM2I4MmY2JyA6IGNpdHkuc3RhclZpc2liaWxpdHkgPj0gNjUgPyAnI2Y1OWUwYicgOiAnI2VmNDQ0NCd9Ii8+PC9zdmc+`,
-                iconSize: [32, 48],
-                iconAnchor: [16, 48],
-                popupAnchor: [0, -48],
+                iconUrl: `data:image/svg+xml;base64,${encodedSvg}`,
+                iconSize: [24, 32],
+                iconAnchor: [12, 32],
+                popupAnchor: [0, -32],
               });
 
               return (

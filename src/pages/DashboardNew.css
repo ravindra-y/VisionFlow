@@ -86,6 +86,18 @@
   justify-content: center;
   cursor: pointer;
   font-size: 1.25rem;
+  color: #8b92b0;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  color: #6366f1;
+  border-color: #3a3f55;
+}
+
+.theme-toggle-btn svg {
+  width: 20px;
+  height: 20px;
 }
 
 /* Live Status */
@@ -156,6 +168,12 @@
   font-size: 1.5rem;
 }
 
+.metric-icon svg {
+  width: 24px;
+  height: 24px;
+  color: inherit;
+}
+
 .visibility-icon {
   background: rgba(99, 102, 241, 0.15);
 }
@@ -170,6 +188,14 @@
 
 .location-icon {
   background: rgba(34, 197, 94, 0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-icon svg {
+  width: 20px;
+  height: 20px;
 }
 
 .metric-content {
@@ -215,7 +241,7 @@
 /* Dashboard Grid - Chart and Alerts */
 .dashboard-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -316,6 +342,7 @@
   border: 1px solid #1f2437;
   border-radius: 20px;
   padding: 2rem;
+  margin-top: 0;
 }
 
 .alerts-header {
@@ -327,6 +354,14 @@
 
 .alerts-icon {
   font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alerts-icon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .alerts-title {
@@ -377,6 +412,14 @@
 
 .badge-icon {
   font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-icon svg {
+  width: 16px;
+  height: 16px;
 }
 
 .badge-text {
@@ -402,6 +445,14 @@
 
 .alert-pin {
   font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-pin svg {
+  width: 16px;
+  height: 16px;
 }
 
 .alert-time {
@@ -423,6 +474,8 @@
   border-radius: 20px;
   padding: 2rem;
   border: 1px solid #2a2f45;
+  display: flex;
+  flex-direction: column;
 }
 
 .location-map-header {
@@ -442,72 +495,16 @@
   margin: 0;
 }
 
-.interactive-map {
-  background: linear-gradient(135deg, #2a3f5f 0%, #1e2d47 100%);
+.location-map-card > div:nth-child(2) {
+  flex: 1;
   border-radius: 16px;
-  padding: 3rem 2rem;
-  text-align: center;
-  position: relative;
-  margin-bottom: 2rem;
-  min-height: 280px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
+  margin-bottom: 1.5rem;
+  min-height: 300px;
 }
 
-.map-pin-icon {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  filter: drop-shadow(0 4px 12px rgba(99, 102, 241, 0.4));
-}
-
-.map-label {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #6366f1;
-  margin-bottom: 0.75rem;
-}
-
-.map-coordinates {
-  font-size: 0.9375rem;
-  color: #8b92b0;
-}
-
-.map-dot {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background: #6366f1;
-  border-radius: 50%;
-  animation: pulse-dot 2s ease-in-out infinite;
-}
-
-.map-dot.dot-1 {
-  top: 25%;
-  left: 20%;
-  animation-delay: 0s;
-}
-
-.map-dot.dot-2 {
-  top: 65%;
-  right: 25%;
-  animation-delay: 1s;
-}
-
-@keyframes pulse-dot {
-
-  0%,
-  100% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
+.interactive-map {
+  display: none;
 }
 
 .location-stats {

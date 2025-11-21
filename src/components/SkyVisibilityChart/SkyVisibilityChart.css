@@ -1,0 +1,260 @@
+.sky-visibility-chart {
+  background: #131829;
+  border: 1px solid #1f2437;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* Header Section */
+.chart-header-section {
+  margin-bottom: 2rem;
+}
+
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.chart-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 0.5rem;
+}
+
+.chart-description {
+  font-size: 0.95rem;
+  color: #8b92b0;
+  margin: 0;
+}
+
+.time-range-selector {
+  display: flex;
+  gap: 0.5rem;
+  background: #1a1f35;
+  padding: 0.375rem;
+  border-radius: 8px;
+  border: 1px solid #2a2f45;
+}
+
+.time-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: transparent;
+  color: #8b92b0;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+}
+
+.time-btn.active {
+  background: #6366f1;
+  color: white;
+}
+
+.time-btn:hover {
+  color: white;
+}
+
+/* Chart Wrapper */
+.chart-wrapper {
+  width: 100%;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #0a0e1a 0%, #13182a 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.chart-wrapper .recharts-wrapper {
+  outline: none;
+}
+
+/* Custom Tooltip */
+.chart-tooltip {
+  background: rgba(19, 24, 41, 0.95);
+  border: 1px solid #2a2f45;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.tooltip-time {
+  color: white;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+}
+
+.tooltip-value {
+  margin: 0.25rem 0;
+  font-size: 0.875rem;
+}
+
+/* Insights Grid */
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.insight-card {
+  background: linear-gradient(135deg, #1a1f35 0%, #0d1117 100%);
+  border: 1px solid #2a2f45;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+  border-color: #3a3f55;
+  transform: translateY(-2px);
+}
+
+.insight-icon {
+  font-size: 2rem;
+  min-width: 48px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6366f1;
+}
+
+.insight-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.insight-content {
+  flex: 1;
+}
+
+.insight-label {
+  font-size: 0.75rem;
+  color: #8b92b0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.insight-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.insight-detail {
+  font-size: 0.875rem;
+  color: #8b92b0;
+  margin: 0.25rem 0 0;
+}
+
+.peak-hours {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.peak-badge {
+  display: inline-block;
+  background: #6366f1;
+  color: white;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Recharts Customization */
+.recharts-surface {
+  outline: none;
+}
+
+.recharts-cartesian-axis-tick {
+  font-size: 12px;
+}
+
+.recharts-legend-wrapper {
+  padding-top: 1.5rem;
+}
+
+.recharts-legend-item {
+  color: #8b92b0 !important;
+}
+
+.recharts-default-tooltip {
+  outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sky-visibility-chart {
+    padding: 1.5rem;
+  }
+
+  .header-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .chart-title {
+    font-size: 1.25rem;
+  }
+
+  .chart-wrapper {
+    padding: 1rem;
+  }
+
+  .insights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .insight-card {
+    padding: 1rem;
+  }
+
+  .insight-icon {
+    font-size: 1.5rem;
+  }
+
+  .insight-value {
+    font-size: 1.5rem;
+  }
+
+  .details-table th,
+  .details-table td {
+    padding: 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .progress-label {
+    font-size: 0.65rem;
+  }
+
+  @media (max-width: 480px) {
+    .insights-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .details-table {
+      font-size: 0.7rem;
+    }
+  }
+}
