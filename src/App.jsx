@@ -6,6 +6,7 @@ import ShootingStars from './components/Background/ShootingStars'
 import HomePage from './pages/HomePage'
 import DashboardPage from './pages/DashboardPage'
 import LocationsPage from './pages/LocationsPage'
+import RecommendationsPage from './pages/RecommendationsPage'
 
 function AppContent() {
   const location = useLocation()
@@ -24,6 +25,7 @@ function AppContent() {
         <Route path="/" element={<HomePage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/locations" element={<LocationsPage />} />
+        <Route path="/recommendations" element={<RecommendationsPage />} />
       </Routes>
     </div>
   )
