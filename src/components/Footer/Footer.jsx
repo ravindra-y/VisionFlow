@@ -1,5 +1,6 @@
 import { FiGithub, FiTwitter, FiMail } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
+import logo from "../../assets/Screenshot 2025-11-21 161342.png";
 import "./Footer.css";
 
 const Footer = () => {
@@ -17,7 +18,11 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
           <div className="footer-brand">
-            <div className="footer-logo">+</div>
+            <img
+              src={logo}
+              alt="Night Sky Monitoring"
+              className="footer-logo"
+            />
             <h3 className="footer-title">Night-Sky Monitor</h3>
           </div>
           <p className="footer-description">

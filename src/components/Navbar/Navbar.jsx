@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX, FiMoon } from "react-icons/fi";
+import logo from "../../assets/Screenshot 2025-11-21 161342.png";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -26,24 +27,7 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Logo and Brand */}
         <Link to="/" className="navbar-brand" onClick={closeMenu}>
-          <div className="logo">
-            <svg
-              className="star-icon"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
+          <img src={logo} alt="Night Sky Monitoring" className="navbar-logo" />
           <h1 className="brand-title">Night Sky Monitor</h1>
         </Link>
 

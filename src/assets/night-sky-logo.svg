@@ -1,0 +1,67 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#312e81;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="eyeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100" fill="url(#bgGradient)" />
+
+  <!-- Moon -->
+  <circle cx="70" cy="45" r="18" fill="white" opacity="0.95" />
+  <circle cx="75" cy="40" r="18" fill="url(#bgGradient)" />
+
+  <!-- Stars around moon -->
+  <g fill="white" opacity="0.8">
+    <!-- Top left star -->
+    <polygon points="50,35 52,41 58,41 53,45 55,51 50,47 45,51 47,45 42,41 48,41" />
+    <!-- Top right star -->
+    <polygon points="95,25 96,28 99,28 97,30 98,33 95,31 92,33 93,30 91,28 94,28" />
+    <!-- Left star -->
+    <polygon points="30,70 31,73 34,73 32,75 33,78 30,76 27,78 28,75 26,73 29,73" />
+    <!-- Right star -->
+    <polygon points="150,60 152,66 158,66 153,70 155,76 150,72 145,76 147,70 142,66 148,66" />
+    <!-- Bottom right star -->
+    <polygon points="125,150 126,153 129,153 127,155 128,158 125,156 122,158 123,155 121,153 124,153" />
+  </g>
+
+  <!-- Eye outline -->
+  <g fill="none" stroke="url(#eyeGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Upper eyelid -->
+    <path d="M 60 110 Q 85 85 110 110" />
+    <!-- Lower eyelid -->
+    <path d="M 60 110 Q 85 135 110 110" />
+  </g>
+
+  <!-- Iris -->
+  <circle cx="85" cy="110" r="12" fill="url(#eyeGradient)" opacity="0.7" />
+  <!-- Pupil -->
+  <circle cx="85" cy="110" r="7" fill="#0891b2" />
+  <!-- Pupil highlight -->
+  <circle cx="87" cy="108" r="2.5" fill="white" opacity="0.9" />
+
+  <!-- Telescope tube -->
+  <g stroke="url(#eyeGradient)" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <line x1="115" y1="85" x2="140" y2="60" />
+  </g>
+
+  <!-- Telescope lens (circular end) -->
+  <circle cx="142" cy="58" r="8" fill="none" stroke="url(#eyeGradient)" stroke-width="2" />
+  <circle cx="142" cy="58" r="5" fill="url(#eyeGradient)" opacity="0.4" />
+  <!-- Lens shine -->
+  <circle cx="139" cy="55" r="2" fill="white" opacity="0.8" />
+
+  <!-- Wave pattern at bottom -->
+  <g stroke="url(#eyeGradient)" stroke-width="1.5" fill="none" opacity="0.6">
+    <path d="M 40 160 Q 50 155 60 160 T 80 160 T 100 160 T 120 160 T 140 160 T 160 160" />
+    <path d="M 35 170 Q 45 165 55 170 T 75 170 T 95 170 T 115 170 T 135 170 T 155 170 T 175 170" />
+    <path d="M 40 180 Q 50 175 60 180 T 80 180 T 100 180 T 120 180 T 140 180 T 160 180" />
+  </g>
+</svg>
