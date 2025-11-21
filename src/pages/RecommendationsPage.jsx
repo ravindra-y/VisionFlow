@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import { Eye, Cloud, Lightbulb, TrendingUp } from 'lucide-react'
-import './RecommendationsPage.css'
+import { useState } from "react";
+import { FiEye, FiCloud, FiZap, FiTrendingUp } from "react-icons/fi";
+import "./RecommendationsPage.css";
 
 const RecommendationsPage = () => {
-  const [selectedLocation, setSelectedLocation] = useState('Raipur')
+  const [selectedLocation, setSelectedLocation] = useState("Raipur");
 
   return (
     <div className="recommendations-page">
@@ -11,7 +11,9 @@ const RecommendationsPage = () => {
         {/* Header Section */}
         <div className="recommendations-header">
           <h1 className="recommendations-title">Daily Recommendations</h1>
-          <p className="recommendations-subtitle">Top observation spots for tonight based on live conditions</p>
+          <p className="recommendations-subtitle">
+            Top observation spots for tonight based on live conditions
+          </p>
 
           <div className="header-info">
             <div className="location-selector-rec">
@@ -51,7 +53,9 @@ const RecommendationsPage = () => {
 
           <div className="ideal-spot-header">
             <div>
-              <h2 className="ideal-spot-name">Barnawapara Wildlife Sanctuary</h2>
+              <h2 className="ideal-spot-name">
+                Barnawapara Wildlife Sanctuary
+              </h2>
               <p className="ideal-spot-coords">21.1458° N, 81.3294° E</p>
             </div>
             <div className="ideal-spot-score">
@@ -126,21 +130,65 @@ const RecommendationsPage = () => {
           <div className="timeline-header">
             <div>
               <h3 className="timeline-title">Tonight's Sky Quality Timeline</h3>
-              <p className="timeline-subtitle">Optimal observation quality throughout the night</p>
+              <p className="timeline-subtitle">
+                Optimal observation quality throughout the night
+              </p>
             </div>
           </div>
 
           <div className="timeline-chart">
-            <svg className="quality-chart" viewBox="0 0 1200 300" preserveAspectRatio="none">
+            <svg
+              className="quality-chart"
+              viewBox="0 0 1200 300"
+              preserveAspectRatio="none"
+            >
               {/* Grid lines */}
-              <line x1="0" y1="60" x2="1200" y2="60" stroke="#2a2f45" strokeWidth="1" strokeDasharray="5,5" />
-              <line x1="0" y1="120" x2="1200" y2="120" stroke="#2a2f45" strokeWidth="1" strokeDasharray="5,5" />
-              <line x1="0" y1="180" x2="1200" y2="180" stroke="#2a2f45" strokeWidth="1" strokeDasharray="5,5" />
-              <line x1="0" y1="240" x2="1200" y2="240" stroke="#2a2f45" strokeWidth="1" strokeDasharray="5,5" />
+              <line
+                x1="0"
+                y1="60"
+                x2="1200"
+                y2="60"
+                stroke="#2a2f45"
+                strokeWidth="1"
+                strokeDasharray="5,5"
+              />
+              <line
+                x1="0"
+                y1="120"
+                x2="1200"
+                y2="120"
+                stroke="#2a2f45"
+                strokeWidth="1"
+                strokeDasharray="5,5"
+              />
+              <line
+                x1="0"
+                y1="180"
+                x2="1200"
+                y2="180"
+                stroke="#2a2f45"
+                strokeWidth="1"
+                strokeDasharray="5,5"
+              />
+              <line
+                x1="0"
+                y1="240"
+                x2="1200"
+                y2="240"
+                stroke="#2a2f45"
+                strokeWidth="1"
+                strokeDasharray="5,5"
+              />
 
               {/* Area fill under curve */}
               <defs>
-                <linearGradient id="qualityGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <linearGradient
+                  id="qualityGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
                   <stop offset="0%" stopColor="#6366f1" stopOpacity="0.4" />
                   <stop offset="100%" stopColor="#6366f1" stopOpacity="0.05" />
                 </linearGradient>
@@ -215,17 +263,17 @@ const RecommendationsPage = () => {
 
               <div className="spot-metrics">
                 <div className="spot-metric">
-                  <Eye className="spot-metric-icon" size={20} />
+                  <FiEye className="spot-metric-icon" size={20} />
                   <span className="spot-metric-label">Visibility</span>
                   <span className="spot-metric-value">92%</span>
                 </div>
                 <div className="spot-metric">
-                  <Cloud className="spot-metric-icon" size={20} />
+                  <FiCloud className="spot-metric-icon" size={20} />
                   <span className="spot-metric-label">Cloud</span>
                   <span className="spot-metric-value">12%</span>
                 </div>
                 <div className="spot-metric">
-                  <Lightbulb className="spot-metric-icon" size={20} />
+                  <FiZap className="spot-metric-icon" size={20} />
                   <span className="spot-metric-label">Pollution</span>
                   <span className="spot-metric-value">1.5</span>
                 </div>
@@ -233,15 +281,15 @@ const RecommendationsPage = () => {
 
               <div className="spot-features">
                 <div className="feature-item">
-                  <TrendingUp className="feature-icon" size={16} />
+                  <FiTrendingUp className="feature-icon" size={16} />
                   <span className="feature-text">Darkest location</span>
                 </div>
                 <div className="feature-item">
-                  <TrendingUp className="feature-icon" size={16} />
+                  <FiTrendingUp className="feature-icon" size={16} />
                   <span className="feature-text">High elevation</span>
                 </div>
                 <div className="feature-item">
-                  <TrendingUp className="feature-icon" size={16} />
+                  <FiTrendingUp className="feature-icon" size={16} />
                   <span className="feature-text">Stable conditions</span>
                 </div>
               </div>
@@ -270,17 +318,17 @@ const RecommendationsPage = () => {
 
               <div className="spot-metrics">
                 <div className="spot-metric">
-                  <Eye className="spot-metric-icon" size={20} />
+                  <FiEye className="spot-metric-icon" size={20} />
                   <span className="spot-metric-label">Visibility</span>
                   <span className="spot-metric-value">90%</span>
                 </div>
                 <div className="spot-metric">
-                  <Cloud className="spot-metric-icon" size={20} />
+                  <FiCloud className="spot-metric-icon" size={20} />
                   <span className="spot-metric-label">Cloud</span>
                   <span className="spot-metric-value">10%</span>
                 </div>
                 <div className="spot-metric">
-                  <Lightbulb className="spot-metric-icon" size={20} />
+                  <FiZap className="spot-metric-icon" size={20} />
                   <span className="spot-metric-label">Pollution</span>
                   <span className="spot-metric-value">1.6</span>
                 </div>
@@ -288,15 +336,15 @@ const RecommendationsPage = () => {
 
               <div className="spot-features">
                 <div className="feature-item">
-                  <TrendingUp className="feature-icon" size={16} />
+                  <FiTrendingUp className="feature-icon" size={16} />
                   <span className="feature-text">Remote location</span>
                 </div>
                 <div className="feature-item">
-                  <TrendingUp className="feature-icon" size={16} />
+                  <FiTrendingUp className="feature-icon" size={16} />
                   <span className="feature-text">Excellent air quality</span>
                 </div>
                 <div className="feature-item">
-                  <TrendingUp className="feature-icon" size={16} />
+                  <FiTrendingUp className="feature-icon" size={16} />
                   <span className="feature-text">Low humidity</span>
                 </div>
               </div>
@@ -325,17 +373,17 @@ const RecommendationsPage = () => {
 
               <div className="spot-metrics">
                 <div className="spot-metric">
-                  <Eye className="spot-metric-icon" size={20} />
+                  <FiEye className="spot-metric-icon" size={20} />
                   <span className="spot-metric-label">Visibility</span>
                   <span className="spot-metric-value">91%</span>
                 </div>
                 <div className="spot-metric">
-                  <Cloud className="spot-metric-icon" size={20} />
+                  <FiCloud className="spot-metric-icon" size={20} />
                   <span className="spot-metric-label">Cloud</span>
                   <span className="spot-metric-value">14%</span>
                 </div>
                 <div className="spot-metric">
-                  <Lightbulb className="spot-metric-icon" size={20} />
+                  <FiZap className="spot-metric-icon" size={20} />
                   <span className="spot-metric-label">Pollution</span>
                   <span className="spot-metric-value">1.9</span>
                 </div>
@@ -343,15 +391,15 @@ const RecommendationsPage = () => {
 
               <div className="spot-features">
                 <div className="feature-item">
-                  <TrendingUp className="feature-icon" size={16} />
+                  <FiTrendingUp className="feature-icon" size={16} />
                   <span className="feature-text">Wide open views</span>
                 </div>
                 <div className="feature-item">
-                  <TrendingUp className="feature-icon" size={16} />
+                  <FiTrendingUp className="feature-icon" size={16} />
                   <span className="feature-text">Minimal obstructions</span>
                 </div>
                 <div className="feature-item">
-                  <TrendingUp className="feature-icon" size={16} />
+                  <FiTrendingUp className="feature-icon" size={16} />
                   <span className="feature-text">Good accessibility</span>
                 </div>
               </div>
@@ -380,17 +428,17 @@ const RecommendationsPage = () => {
 
               <div className="spot-metrics">
                 <div className="spot-metric">
-                  <Eye className="spot-metric-icon" size={20} />
+                  <FiEye className="spot-metric-icon" size={20} />
                   <span className="spot-metric-label">Visibility</span>
                   <span className="spot-metric-value">88%</span>
                 </div>
                 <div className="spot-metric">
-                  <Cloud className="spot-metric-icon" size={20} />
+                  <FiCloud className="spot-metric-icon" size={20} />
                   <span className="spot-metric-label">Cloud</span>
                   <span className="spot-metric-value">15%</span>
                 </div>
                 <div className="spot-metric">
-                  <Lightbulb className="spot-metric-icon" size={20} />
+                  <FiZap className="spot-metric-icon" size={20} />
                   <span className="spot-metric-label">Pollution</span>
                   <span className="spot-metric-value">2.1</span>
                 </div>
@@ -398,15 +446,15 @@ const RecommendationsPage = () => {
 
               <div className="spot-features">
                 <div className="feature-item">
-                  <TrendingUp className="feature-icon" size={16} />
+                  <FiTrendingUp className="feature-icon" size={16} />
                   <span className="feature-text">Natural dark sky</span>
                 </div>
                 <div className="feature-item">
-                  <TrendingUp className="feature-icon" size={16} />
+                  <FiTrendingUp className="feature-icon" size={16} />
                   <span className="feature-text">Protected area</span>
                 </div>
                 <div className="feature-item">
-                  <TrendingUp className="feature-icon" size={16} />
+                  <FiTrendingUp className="feature-icon" size={16} />
                   <span className="feature-text">Weather stability</span>
                 </div>
               </div>
@@ -422,7 +470,7 @@ const RecommendationsPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default RecommendationsPage
+export default RecommendationsPage;
