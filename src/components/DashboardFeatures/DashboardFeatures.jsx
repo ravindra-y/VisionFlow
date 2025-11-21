@@ -1,44 +1,44 @@
-import './DashboardFeatures.css'
+import "./DashboardFeatures.css";
 
 const DashboardFeatures = () => {
   const features = [
     {
-      icon: '⭐',
-      iconColor: '#4169E1',
-      title: 'Real-time Metrics',
-      description: 'Track star visibility, cloud cover, and light pollution levels across all locations in real-time.'
+      icon: "⭐",
+      iconColor: "#4169E1",
+      title: "Real-time Metrics",
+      description: "",
     },
     {
-      icon: '📍',
-      iconColor: '#10B981',
-      title: 'Interactive Map',
-      description: 'Visualize all monitoring locations on an interactive map with color-coded quality indicators.'
+      icon: "📍",
+      iconColor: "#10B981",
+      title: "Interactive Map",
+      description: "",
     },
     {
-      icon: '📈',
-      iconColor: '#8B5CF6',
-      title: 'Daily Recommendations',
-      description: 'Get personalized recommendations for the best observation spots based on current conditions.'
+      icon: "📈",
+      iconColor: "#8B5CF6",
+      title: "Daily Recommendations",
+      description: "",
     },
     {
-      icon: '✓',
-      iconColor: '#F97316',
-      title: 'Location Ratings',
-      description: 'Browse detailed ratings and metrics for each location with sortable tables.'
+      icon: "✓",
+      iconColor: "#F97316",
+      title: "Location Ratings",
+      description: "",
     },
     {
-      icon: '🌙',
-      iconColor: '#EC4899',
-      title: 'Dark Mode Support',
-      description: 'Seamless dark mode for comfortable viewing during nighttime planning.'
+      icon: "🌙",
+      iconColor: "#EC4899",
+      title: "Dark Mode Support",
+      description: "",
     },
     {
-      icon: '→',
-      iconColor: '#06B6D4',
-      title: 'Responsive Design',
-      description: 'Fully responsive design works perfectly on desktop, tablet, and mobile devices.'
-    }
-  ]
+      icon: "→",
+      iconColor: "#06B6D4",
+      title: "Responsive Design",
+      description: "",
+    },
+  ];
 
   return (
     <section className="dashboard-features">
@@ -53,8 +53,15 @@ const DashboardFeatures = () => {
         <div className="features-grid">
           {features.map((feature, index) => (
             <div key={index} className="feature-item">
-              <div className="feature-icon" style={{ backgroundColor: `${feature.iconColor}33` }}>
-                <span style={{ filter: `drop-shadow(0 0 8px ${feature.iconColor})` }}>
+              <div
+                className="feature-icon"
+                style={{ backgroundColor: `${feature.iconColor}33` }}
+              >
+                <span
+                  style={{
+                    filter: `drop-shadow(0 0 8px ${feature.iconColor})`,
+                  }}
+                >
                   {feature.icon}
                 </span>
               </div>
@@ -65,7 +72,7 @@ const DashboardFeatures = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default DashboardFeatures
+export default DashboardFeatures;
