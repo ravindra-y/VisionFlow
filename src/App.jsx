@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import FloatingDockDemo from "./components/ui/FloatingDockDemo";
 import StarsBackground from "./components/Background/StarsBackground";
 import ShootingStars from "./components/Background/ShootingStars";
 import HomePage from "./pages/HomePage";
@@ -35,6 +36,7 @@ function AppContent() {
         <Route path="/compare" element={<ComparisonPage />} />
         <Route path="/recommendations" element={<RecommendationsPage />} />
       </Routes>
+      <FloatingDockDemo />
       <Footer />
     </div>
   );
