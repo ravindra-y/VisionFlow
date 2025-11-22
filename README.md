@@ -1,16 +1,71 @@
-# React + Vite
+# 🌌 Night-Sky Monitoring Dashboard for Chhattisgarh  
+### _Frontend Development Challenge – Low-Code Track_
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and interactive dashboard designed to visualize **real-time night-sky conditions across Chhattisgarh**, helping astronomy clubs, students, and sky-watchers find the best places for night-time sky observation.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Overview
 
-## React Compiler
+The **Night-Sky Monitoring Dashboard** aggregates and displays night-sky metrics for multiple locations across Chhattisgarh. It features a clean UI with visual elements such as charts, cards, and maps to represent:  
+- ⭐ Star Visibility Score  
+- ☁️ Cloud Cover  
+- 💡 Light Pollution Level  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The dashboard aims to make night-sky observation easier, more accessible, and data-driven.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎯 Core Objectives
+
+- Build a **responsive**, user-friendly frontend dashboard.  
+- Display **current night-sky metrics** using charts, cards, and/or maps.  
+- Provide **location-based ratings** and actionable suggestions.  
+- Keep the UI **simple, intuitive, and up to date**.  
+- Help users identify **ideal sky-watching spots** in real time.
+
+---
+
+## 📦 Features (Deliverables)
+
+### ✅ Main Dashboard  
+- Real-time metrics for:  
+  - Star visibility  
+  - Cloud cover  
+  - Light pollution  
+
+### ✅ Interactive Map + Location View  
+- Ratings for each observation site  
+- Clickable locations  
+- Dynamic metric updates  
+
+### ✅ Daily Recommendations Panel  
+- Suggested best locations for night-sky observation  
+- Quick insights based on current data trends  
+
+---
+
+## ⭐ Bonus Features (Optional Enhancements)
+
+- 📱 Mobile-responsive or minimal mockups  
+- 🔔 Alerts/Notifications  
+- 🌗 Light/Dark theme toggles  
+- 🆚 Location vs. Location comparison  
+- 📊 Trend charts for sky conditions  
+- 📍 Favorite locations feature  
+
+---
+
+## 🛠️ Suggested Tech Stack
+
+You may use any frontend/low-code tools. Example stack:  
+- **HTML, CSS, JavaScript**  
+- **React / Vue / Svelte**  
+- **Chart.js / Recharts / D3.js**  
+- **Leaflet / Mapbox** for maps  
+- **TailwindCSS / Bootstrap** for UI  
+
+*(Update this section based on the actual tools you used.)*
+
+---
+
