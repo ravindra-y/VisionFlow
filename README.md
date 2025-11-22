@@ -65,7 +65,6 @@ You may use any frontend/low-code tools. Example stack:
 - **Leaflet / Mapbox** for maps  
 - **TailwindCSS / Bootstrap** for UI  
 
-*(Update this section based on the actual tools you used.)*
 
 ---
 
