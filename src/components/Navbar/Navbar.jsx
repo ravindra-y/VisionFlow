@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX, FiMoon } from "react-icons/fi";
-import logo from "../../assets/Screenshot 2025-11-21 161342.png";
+import logo from "../../../public/Gemini_Generated_Image_mk3kanmk3kanmk3k-photoaidcom-cropped.png";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ isHomePage }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -23,7 +23,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isHomePage ? 'navbar-home' : ''}`}>
       <div className="navbar-container">
         {/* Logo and Brand */}
         <Link to="/" className="navbar-brand" onClick={closeMenu}>

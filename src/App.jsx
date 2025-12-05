@@ -19,6 +19,7 @@ import RecommendationsPage from "./pages/RecommendationsPage";
 function AppContent() {
   const location = useLocation();
   const showBackground = location.pathname === "/";
+  const isHomePage = location.pathname === "/";
 
   return (
     <div className="app">
@@ -28,7 +29,7 @@ function AppContent() {
           <ShootingStars />
         </>
       )}
-      <Navbar />
+      <Navbar isHomePage={isHomePage} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
