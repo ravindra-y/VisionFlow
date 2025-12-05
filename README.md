@@ -1,18 +1,18 @@
 <div align="center">
   <img src="./public/Gemini_Generated_Image_mk3kanmk3kanmk3k-photoaidcom-cropped.png" alt="VisionFlow Logo" width="150"/>
   
-  # VisionFlow 🌟
+  # VisionFlow 
 
   A modern web application for discovering and monitoring the best stargazing locations in Chhattisgarh. Track real-time night sky conditions, star visibility, cloud cover, and light pollution across multiple locations.
 </div>
 
-## ⚠️ Important Note
+## ⚠ Important Note
 
 **This project currently does not use any backend or external API.**
 
 All displayed values (visibility, cloud cover, pollution, metrics, charts) are **static demo data for UI demonstration only**.
 
-### 🔌 Converting to a Real-Time System
+### ⚡ Converting to a Real-Time System
 
 If you want to convert this into a fully functional real-time sky monitoring system, you can integrate the following APIs:
 
@@ -23,27 +23,27 @@ If you want to convert this into a fully functional real-time sky monitoring sys
 - **Light Pollution datasets** – sky brightness levels
 
 These APIs will allow you to fetch:
-- ✔ Real-time visibility
-- ✔ Cloud percentage
-- ✔ Hourly trends
-- ✔ Pollution index
-- ✔ Humidity & wind
-- ✔ Forecast graphs
+- ✓ Real-time visibility
+- ✓ Cloud percentage
+- ✓ Hourly trends
+- ✓ Pollution index
+- ✓ Humidity & wind
+- ✓ Forecast graphs
 
-## ✨ Features
+## ✦ Features
 
 ### Live Features
 
-- ✔ Real-time star visibility score
-- ✔ Cloud cover, humidity, wind speed & sky clarity metrics
-- ✔ Light pollution index (Bortle/SQM-based)
-- ✔ Interactive district-wise night-sky map
-- ✔ Hourly & 24-hour visibility forecasts
-- ✔ Best observation time suggestions
-- ✔ Location comparison tool
-- ✔ Automated recommendations for top 5 spots
-- ✔ Detailed yearly trend graphs for visibility & pollution
-- ✔ Dark/Light theme support
+- ✓ Real-time star visibility score
+- ✓ Cloud cover, humidity, wind speed & sky clarity metrics
+- ✓ Light pollution index (Bortle/SQM-based)
+- ✓ Interactive district-wise night-sky map
+- ✓ Hourly & 24-hour visibility forecasts
+- ✓ Best observation time suggestions
+- ✓ Location comparison tool
+- ✓ Automated recommendations for top 5 spots
+- ✓ Detailed yearly trend graphs for visibility & pollution
+- ✓ Dark/Light theme support
 
 ### Landing Page
 
@@ -112,7 +112,14 @@ Provides a side-by-side breakdown of all major sky observation metrics—visibil
 
 ![Detailed Comparison](./public/screenshot-image/Screenshot%202025-12-05%20194533.png)
 
-## 🚀 Tech Stack
+## ▸ Tech Stack
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=for-the-badge&logo=leaflet&logoColor=white)
 
 - **React** - UI library for building interactive interfaces
 - **Vite** - Fast build tool and dev server
@@ -122,7 +129,7 @@ Provides a side-by-side breakdown of all major sky observation metrics—visibil
 - **Lucide React** - Modern icon library
 - **React Icons** - Additional icon components
 
-## 📦 Installation
+## ▸ Installation
 
 1. Clone the repository:
 ```bash
@@ -142,14 +149,14 @@ npm run dev
 
 4. Open your browser and navigate to `http://localhost:5173`
 
-## 🛠️ Available Scripts
+## ▸ Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint for code quality
 
-## 📁 Project Structure
+## ▸ Project Structure
 
 ```
 VisionFlow/
@@ -178,7 +185,7 @@ VisionFlow/
 └── package.json
 ```
 
-## 🌙 Features Overview
+## ▸ Features Overview
 
 ### Dashboard
 View comprehensive analytics including:
@@ -208,7 +215,7 @@ Compare multiple locations by:
 - Weather conditions
 - Best time predictions
 
-## 🎨 Design Features
+## ▸ Design Features
 
 - Stunning animated starfield backgrounds
 - Shooting stars effects
@@ -217,20 +224,20 @@ Compare multiple locations by:
 - Responsive grid layouts
 - Interactive data visualizations
 
-## 🤝 Contributing
+## ▸ Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 License
+## ▸ License
 
 This project is open source and available under the MIT License.
 
-## 👨‍💻 Author
+## ▸ Author
 
 **Ravindra Y**
 - GitHub: [@ravindra-y](https://github.com/ravindra-y)
 
 ---
 
-Made with ❤️ for astronomy enthusiasts and stargazers
+Made with ♥ for astronomy enthusiasts and stargazers
 
