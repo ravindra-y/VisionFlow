@@ -234,6 +234,9 @@ This project is open source and available under the MIT License.
 
 ## ▸ Author
 
+**Chhatrapati Sahu**  
+- GitHub: [@Chhatrapati-sahu-09](https://github.com/Chhatrapati-sahu-09)
+
 **Ravindra Y**
 - GitHub: [@ravindra-y](https://github.com/ravindra-y)
 
